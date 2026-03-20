@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión — Forma Y Figura</title>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<div class="envoltorio-autenticacion">
+  <div class="visual-autenticacion">
+    <div class="fondo-visual-autenticacion"></div>
+    <div class="cuadricula-visual-autenticacion"></div>
+    <div class="contenido-visual-autenticacion">
+      <a href="index.html" class="logo-autenticacion">
+        <div class="hex-logo">IF</div>
+        <span class="texto-logo">FORMA Y <span>FIGURA</span></span>
+      </a>
+      <div class="principal-visual-autenticacion">
+        <h1 class="eslogan-autenticacion">
+          DE<br>
+          VUELTA<br>
+          AL <span class="rojo">RING</span>
+        </h1>
+        <p class="sub-eslogan-autenticacion">Tu transformación te está esperando. Cada día cuenta. Cada repetición importa.</p>
+        <div class="caracteristicas-autenticacion">
+          <div class="caracteristica-autenticacion">
+            <div class="icono-carac">📅</div>
+            Reserva clases en segundos
+          </div>
+          <div class="caracteristica-autenticacion">
+            <div class="icono-carac">📊</div>
+            Monitorea tu progreso
+          </div>
+          <div class="caracteristica-autenticacion">
+            <div class="icono-carac">💬</div>
+            Chat directo con entrenadores
+          </div>
+          <div class="caracteristica-autenticacion">
+            <div class="icono-carac">🔔</div>
+            Notificaciones personalizadas
+          </div>
+        </div>
+      </div>
+      <div class="estadisticas-autenticacion">
+        <div>
+          <div class="num-estadistica-autenticacion">12<span>K</span></div>
+          <div class="etiq-estadistica-autenticacion">Miembros</div>
+        </div>
+        <div>
+          <div class="num-estadistica-autenticacion">98<span>%</span></div>
+          <div class="etiq-estadistica-autenticacion">Satisfacción</div>
+        </div>
+        <div>
+          <div class="num-estadistica-autenticacion">8<span>+</span></div>
+          <div class="etiq-estadistica-autenticacion">Años</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-autenticacion">
+    <div class="encabezado-autenticacion">
+      <div class="etiqueta-autenticacion">Bienvenido de vuelta</div>
+      <h2 class="titulo-autenticacion">INICIA<br>SESIÓN</h2>
+      <p class="subtitulo-autenticacion">Accede a tu panel de entrenamiento y resultados.</p>
+    </div>
+
+    <form class="formulario-autenticacion" id="formularioLogin" novalidate>
+      <div class="grupo-formulario">
+        <label>Correo Electrónico</label>
+        <div class="envoltorio-entrada">
+          <input type="email" id="correo" placeholder="correo@ejemplo.com" required autocomplete="email">
+          <span class="icono-entrada">✉️</span>
+        </div>
+      </div>
+
+      <div class="grupo-formulario">
+        <label>
+          Contraseña
+          <a href="#" id="enlaceOlvido">¿Olvidaste tu contraseña?</a>
+        </label>
+        <div class="envoltorio-entrada">
+          <input type="password" id="contrasena" placeholder="••••••••" required autocomplete="current-password">
+          <span class="icono-entrada">🔒</span>
+          <button type="button" class="conmutador-contrasena" data-toggle="password">👁</button>
+        </div>
+      </div>
+
+      <div class="check-formulario" style="margin:-4px 0;">
+        <input type="checkbox" id="recordarme">
+        <label for="recordarme">Mantener sesión iniciada en este dispositivo</label>
+      </div>
+
+      <button type="submit" class="boton-enviar" id="botonLogin">
+        <span id="textoBotonLogin">Entrar al Gimnasio</span>
+        <span id="cargadorLogin" style="display:none;">⏳</span>
+      </button>
+
+      <div class="divisor-autenticacion"><span>O continúa con</span></div>
+
+      <div class="autenticacion-social">
+        <button type="button" class="boton-social google" data-social="Google">
+          <span class="icono-s">🔴</span> Google
+        </button>
+        <button type="button" class="boton-social facebook" data-social="Facebook">
+          <span class="icono-s">🔵</span> Facebook
+        </button>
+        <button type="button" class="boton-social apple" data-social="Apple">
+          <span class="icono-s">⬛</span> Apple
+        </button>
+      </div>
+
+      <div class="enlace-pie-autenticacion">
+        ¿No tienes cuenta? <a href="registro.html">Regístrate gratis →</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="capa-modal" id="modalOlvido">
+  <div class="caja-modal">
+    <button class="cerrar-modal" id="cerrarModalOlvido">✕</button>
+    
+    <div id="formularioOlvido">
+      <div class="icono-modal">🔑</div>
+      <h3 class="titulo-modal">RECUPERAR<br>CONTRASEÑA</h3>
+      <p class="texto-modal">Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+
+      <div class="grupo-formulario" style="margin-bottom:20px;">
+        <label>Correo Electrónico</label>
+        <div class="envoltorio-entrada">
+          <input type="email" id="correoRestablecer" placeholder="correo@ejemplo.com" class="entrada-sin-icono" style="padding-left:16px;">
+        </div>
+      </div>
+
+      <button type="button" id="botonEnviarEnlace" class="boton-enviar" style="clip-path:none;width:100%;">
+        Enviar Enlace de Recuperación
+      </button>
+    </div>
+
+    <div class="exito-modal" id="exitoRestablecer">
+      <div class="icono-exito">📧</div>
+      <h3>¡Correo Enviado!</h3>
+      <p>Revisa tu bandeja de entrada.<br>El enlace expira en 30 minutos.</p>
+      <button type="button" id="botonExitoEntendido" class="boton-enviar" style="margin-top:24px;clip-path:none;width:100%;">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<div id="notificacion" class="notificacion-flotante"></div>
+
+<script src="auth.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

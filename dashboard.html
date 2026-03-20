@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma Y Figura — Panel de Control</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="contenedor-app">
+    <aside class="sidebar">
+        <div class="logo-box">
+            <div class="hex-badge">IF</div>
+            <span class="brand-title">FORMA Y <span>FIGURA</span></span>
+        </div>
+
+        <nav class="navegacion">
+            <p class="etiqueta-nav">Gimnasio</p>
+            <button class="btn-nav activo" data-target="inicio">🏠 Inicio</button>
+            <button class="btn-nav" data-target="clases">📅 Reservar Clase</button>
+            <button class="btn-nav" data-target="progreso">📈 Mi Progreso</button>
+            <button class="btn-nav" data-target="tienda">🛒 Tienda Fit</button>
+
+            <p class="etiqueta-nav">Personal</p>
+            <button class="btn-nav" data-target="perfil">👤 Mi Perfil</button>
+            <button class="btn-nav" data-target="membresia">💳 Membresía</button>
+            <button class="btn-nav" data-target="chat">💬 Chat Grupal</button>
+        </nav>
+
+        <div class="sidebar-pie">
+            <button class="btn-salir">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <main class="main-body">
+        <header class="top-bar">
+            <div class="header-izq">
+                <h1 id="titulo-seccion">DASHBOARD</h1>
+            </div>
+            <div class="header-der">
+                <button class="notif-btn" data-target="notificaciones">🔔<span class="alerta"></span></button>
+                <div class="usuario-pill" data-target="perfil">
+                    <span class="nombre-user">Brayhan Zapata</span>
+                    <div class="avatar-user">B</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="viewport">
+
+            <section id="inicio" class="modulo activo">
+                <div class="hero-bienvenida">
+                    <h2>¡HOLA, <span class="rojo">BRAYHAN</span>!</h2>
+                    <p>Lunes 23 de Febrero • Semana 8 de entrenamiento</p>
+                </div>
+                <div class="grid-resumen">
+                    <div class="card-mini">🔥 <h3>32</h3> <p>Sesiones</p> </div>
+                    <div class="card-mini">⏱️ <h3>48h</h3> <p>Entreno</p> </div>
+                    <div class="card-mini">⚖️ <h3>76kg</h3> <p>Peso Actual</p> </div>
+                </div>
+            </section>
+
+            <section id="perfil" class="modulo">
+                <div class="card-grande">
+                    <h3>Configuración de Perfil</h3>
+                    <div class="form-grid">
+                        <div class="f-group"><label>Nombre</label><input type="text" value="Brayhan Zapata"></div>
+                        <div class="f-group"><label>Correo</label><input type="email" value="brayhan@ejemplo.com"></div>
+                        <div class="f-group"><label>Nueva Contraseña</label><input type="password"></div>
+                        <button class="btn-accion">Actualizar Datos</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="membresia" class="modulo">
+                <div class="card-membresia">
+                    <div class="info-pago">
+                        <span class="tag-plan">PLAN PRO</span>
+                        <h2>Estado: <span class="verde">ACTIVO</span></h2>
+                        <p>Próximo pago: <b>23 de Marzo, 2026</b></p>
+                        <p>Monto: <b>$89.00 / mes</b></p>
+                    </div>
+                    <div class="acciones-pago">
+                        <button class="btn-oro">Mejorar a Plan Élite</button>
+                        <button class="btn-gris">Cambiar método de pago</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="clases" class="modulo">
+                <h3>Reserva tu lugar</h3>
+                <div class="tabla-contenedor">
+                    <table class="tabla-gym">
+                        <thead>
+                            <tr><th>Hora</th><th>Actividad</th><th>Coach</th><th>Cupos</th><th>Acción</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>07:00</td><td>Crossfit</td><td>Ramírez</td><td>5/20</td><td><button class="btn-book">Reservar</button></td></tr>
+                            <tr><td>09:00</td><td>Powerlifting</td><td>García</td><td>2/10</td><td><button class="btn-book">Reservar</button></td></tr>
+                            <tr><td>18:30</td><td>Funcional</td><td>Zapata</td><td>12/20</td><td><button class="btn-book">Reservar</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="tienda" class="modulo">
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="prod-img"></div>
+                        <h4>Proteína Whey</h4>
+                        <span>$45.00</span>
+                        <button class="btn-compra">Añadir</button>
+                    </div>
+                    <div class="producto-card">
+                        <div class="prod-img"></div>
+                        <h4>Camiseta Iron</h4>
+                        <span>$20.00</span>
+                        <button class="btn-compra">Añadir</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progreso" class="modulo">
+                <div class="card-grafico">
+                    <h3>Evolución Semanal</h3>
+                    <div class="area-grafico">
+                        <div class="placeholder-grafico">Espacio para Gráficas de Progreso</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chat" class="modulo">
+                <div class="chat-box">
+                    <div class="chat-header">Comunidad Forma Y Figura 💬</div>
+                    <div class="chat-mensajes">
+                        <div class="msg-recibido"><b>Coach:</b> ¡Dale con toda hoy, Brayhan!</div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" placeholder="Escribe un mensaje...">
+                        <button class="btn-enviar">➤</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
